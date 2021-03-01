@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CameraPhotoLibrary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="u3n-sz-cGC">
+                                <rect key="frame" x="16" y="44" width="343" height="734"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="W0I-AY-A0m">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="654"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AEI-AM-Nu3">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="327"/>
+                                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Eh8-Ze-COW">
+                                                <rect key="frame" x="0.0" y="327" width="343" height="327"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wFo-RF-fPl">
+                                                        <rect key="frame" x="0.0" y="0.0" width="171.66666666666666" height="327"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NBS-o6-wLy">
+                                                        <rect key="frame" x="171.66666666666663" y="0.0" width="171.33333333333337" height="327"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="R93-NA-Wdr">
+                                        <rect key="frame" x="0.0" y="654" width="343" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQz-jO-TTL">
+                                                <rect key="frame" x="0.0" y="0.0" width="114.33333333333333" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="H8w-AY-C5l"/>
+                                                </constraints>
+                                                <state key="normal" title="사진 촬영"/>
+                                                <connections>
+                                                    <action selector="btnCaptureImageFromCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CB2-zb-dnY"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sze-Ke-9rH">
+                                                <rect key="frame" x="114.33333333333334" y="0.0" width="114.33333333333334" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="ER2-hK-dDP"/>
+                                                </constraints>
+                                                <state key="normal" title="비디오 촬영"/>
+                                                <connections>
+                                                    <action selector="btnRecordVideoFromCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fe5-up-eBE"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n63-T9-Zks">
+                                                <rect key="frame" x="228.66666666666666" y="0.0" width="114.33333333333334" height="40"/>
+                                                <state key="normal" title="초기화"/>
+                                                <connections>
+                                                    <action selector="btnImageInit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m2V-1q-u78"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hAI-Xc-dca">
+                                        <rect key="frame" x="0.0" y="694" width="343" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="306-a3-cx3">
+                                                <rect key="frame" x="0.0" y="0.0" width="171.66666666666666" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="MGP-Jc-sLT"/>
+                                                </constraints>
+                                                <state key="normal" title="사진 불러오기"/>
+                                                <connections>
+                                                    <action selector="btnLoadImageFromLibrary:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QGT-x0-Vfb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOx-WZ-lOb">
+                                                <rect key="frame" x="171.66666666666663" y="0.0" width="171.33333333333337" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="Sp0-Ik-xOq"/>
+                                                </constraints>
+                                                <state key="normal" title="비디오 불러오기"/>
+                                                <connections>
+                                                    <action selector="btnLoadVideoFromLibrary:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b8U-VL-TZ9"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="u3n-sz-cGC" secondAttribute="trailing" constant="16" id="0Gw-af-t4o"/>
+                            <constraint firstItem="u3n-sz-cGC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="7xN-5W-3Fc"/>
+                            <constraint firstItem="u3n-sz-cGC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="eIK-YK-tgk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="u3n-sz-cGC" secondAttribute="bottom" id="sS8-jg-cIY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgView" destination="AEI-AM-Nu3" id="Lan-5Z-mVJ"/>
+                        <outlet property="imgView2" destination="wFo-RF-fPl" id="JTg-J0-0RQ"/>
+                        <outlet property="imgView3" destination="NBS-o6-wLy" id="hrk-Vn-UoG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="106"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

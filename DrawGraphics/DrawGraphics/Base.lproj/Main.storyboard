@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DrawGraphics" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="i7p-Ti-5qr">
+                                <rect key="frame" x="16" y="44" width="343" height="734"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cAn-WJ-fUU">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ab4-Cy-8lX">
+                                                <rect key="frame" x="0.0" y="0.0" width="68.666666666666671" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="gwf-DP-VqC"/>
+                                                </constraints>
+                                                <state key="normal" title="Line"/>
+                                                <connections>
+                                                    <action selector="btnDrawLine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NQF-yu-oMQ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hz5-rY-smK">
+                                                <rect key="frame" x="68.666666666666657" y="0.0" width="68.666666666666657" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="Ktr-yD-P3E"/>
+                                                </constraints>
+                                                <state key="normal" title="Rect"/>
+                                                <connections>
+                                                    <action selector="btnDrawRect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lof-UY-ycP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4aA-Ae-qtq">
+                                                <rect key="frame" x="137.33333333333334" y="0.0" width="68.333333333333343" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="BMm-3l-NkB"/>
+                                                </constraints>
+                                                <state key="normal" title="Circle"/>
+                                                <connections>
+                                                    <action selector="btnDrawCircle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Zn-iE-mHz"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hmq-hF-F5b">
+                                                <rect key="frame" x="205.66666666666666" y="0.0" width="68.666666666666657" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="eVN-op-RnC"/>
+                                                </constraints>
+                                                <state key="normal" title="Arc"/>
+                                                <connections>
+                                                    <action selector="btnDrawArc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5lY-iF-DbC"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vA2-Af-L4c">
+                                                <rect key="frame" x="274.33333333333331" y="0.0" width="68.666666666666686" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="sFL-w4-8OO"/>
+                                                </constraints>
+                                                <state key="normal" title="Fill"/>
+                                                <connections>
+                                                    <action selector="btnDrawFill:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vo1-ez-eeZ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qDB-3l-kIW">
+                                        <rect key="frame" x="0.0" y="40" width="343" height="694"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="i7p-Ti-5qr" secondAttribute="bottom" id="HhS-Vc-jG5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="i7p-Ti-5qr" secondAttribute="trailing" constant="16" id="KbP-wf-3B6"/>
+                            <constraint firstItem="i7p-Ti-5qr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="rwp-Yo-ACY"/>
+                            <constraint firstItem="i7p-Ti-5qr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="wEp-Zh-Z6J"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgView" destination="qDB-3l-kIW" id="d49-Mq-h33"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="106"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
