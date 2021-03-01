@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwipeGesture" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Mnh-Xs-vdX">
+                                <rect key="frame" x="16" y="298" width="343" height="216"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow-up-black.png" translatesAutoresizingMaskIntoConstraints="NO" id="lsO-Wa-nRj">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="72"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="72" id="5yV-aM-gaP"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="OeE-Mm-QqM">
+                                        <rect key="frame" x="0.0" y="72" width="343" height="72"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow-left-black.png" translatesAutoresizingMaskIntoConstraints="NO" id="Mrr-ve-RSb">
+                                                <rect key="frame" x="0.0" y="0.0" width="171.66666666666666" height="72"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="72" id="ldN-tH-K6T"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow-right-black.png" translatesAutoresizingMaskIntoConstraints="NO" id="SmQ-OQ-XF3">
+                                                <rect key="frame" x="171.66666666666663" y="0.0" width="171.33333333333337" height="72"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="72" id="vpw-fU-clf"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow-down-black.png" translatesAutoresizingMaskIntoConstraints="NO" id="u36-do-gMm">
+                                        <rect key="frame" x="0.0" y="144" width="343" height="72"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="72" id="ORP-xK-ynf"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JY0-FF-txn">
+                                <rect key="frame" x="67" y="53" width="227" height="237"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="zM8-zl-nJc">
+                                <rect key="frame" x="16" y="262" width="343" height="27.333333333333329"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="pageChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="Nae-SY-snM"/>
+                                </connections>
+                            </pageControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mnh-Xs-vdX" secondAttribute="trailing" constant="16" id="9sj-Jh-LDO"/>
+                            <constraint firstItem="Mnh-Xs-vdX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="EYx-vg-vdS"/>
+                            <constraint firstItem="Mnh-Xs-vdX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="w9O-o7-SYi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgView" destination="JY0-FF-txn" id="LeI-G7-gpT"/>
+                        <outlet property="imgViewDown" destination="u36-do-gMm" id="Uus-dx-4Cp"/>
+                        <outlet property="imgViewLeft" destination="Mrr-ve-RSb" id="eos-F2-94X"/>
+                        <outlet property="imgViewRight" destination="SmQ-OQ-XF3" id="NXT-uP-Yrc"/>
+                        <outlet property="imgViewUp" destination="lsO-Wa-nRj" id="Py4-59-7bt"/>
+                        <outlet property="pageControl" destination="zM8-zl-nJc" id="GX6-96-YX9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="105.66502463054188"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow-down-black.png" width="209" height="218"/>
+        <image name="arrow-left-black.png" width="218" height="209"/>
+        <image name="arrow-right-black.png" width="218" height="209"/>
+        <image name="arrow-up-black.png" width="209" height="218"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
